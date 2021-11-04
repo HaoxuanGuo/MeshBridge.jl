@@ -5,9 +5,8 @@ version = "0.0.1"
 
 [deps]
 GeometryBasics = "5c1252a2-5f33-56bf-86c9-59e7332b4326"
+MeshCat = "283c5d60-a78f-5afe-a0af-af636b173e11"
 Meshes = "eacbb407-ea5a-433e-ab97-5258b1ca43fa"
 
 [compat]
-GeometryBasics = "0.4"
-Meshes = "0.17"
 julia = "1.6"

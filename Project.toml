@@ -1,7 +1,7 @@
 name = "MeshBridge"
 uuid = "c10a2893-4f73-4179-bc1e-881bcc6b6c0c"
 authors = ["Haoxuan Guo"]
-version = "0.0.1"
+version = "0.0.2"
 
 [deps]
 GeometryBasics = "5c1252a2-5f33-56bf-86c9-59e7332b4326"

@@ -7,7 +7,7 @@ Because there are two packages about geometry
 
 These two are not compatible now. This package is use to convert types between these two packages.
 
-Thanks [Felipe Kersting](https://github.com/felipeek) write the [code](https://github.com/JuliaIO/MeshIO.jl/issues/67) from `GeometryBasics.Mesh` to `Meshes.Mesh`.
+Thanks [Felipe Kersting](https://github.com/felipeek) write the [code](https://github.com/JuliaIO/MeshIO.jl/issues/67) and [Manuel Schmid](https://github.com/mfsch) write the [code](https://github.com/JuliaIO/MeshIO.jl/issues/67#issuecomment-1268931642) from `GeometryBasics.Mesh` to `Meshes.Mesh`.
 
 **NOTE: YOU SHOULD NOT USE BOTH TWO PACKAGE IN YOUR CODE. BECAUSE THE CONVERSION IS VERY SLOW. IT IS JUST WORK WITH OUT ANY PERFORMANCE.**
 

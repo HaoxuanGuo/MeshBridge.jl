@@ -4,26 +4,12 @@ using Meshes: Meshes
 using GeometryBasics: GeometryBasics
 
 function Base.convert(::Type{Meshes.Mesh}, mesh::GeometryBasics.Mesh)
-    vertexToIdx = Dict()
-    for i in 1:length(mesh.position)
-        vertex = mesh.position[i]
-        if haskey(vertexToIdx, vertex)
-            continue
-        end
-        vertexToIdx[vertex] = i
-    end
-    faces = []
-    for triangle in mesh
-        i1 = vertexToIdx[triangle[1]]
-        i2 = vertexToIdx[triangle[2]]
-        i3 = vertexToIdx[triangle[3]]
-        push!(faces, (i1, i2, i3))
-    end
-    topology = Meshes.FullTopology(Meshes.connect.(faces))
-    result = Meshes.SimpleMesh(
-        [Meshes.Point([x[1], x[2], x[3]]) for x in mesh.position], topology
-    )
-    return result
+    points = [Tuple(p) for p in Set(mesh.position)]
+	indices = Dict(p => i for (i, p) in enumerate(points))
+	connectivities = map(mesh) do el
+		Meshes.connect(Tuple(indices[Tuple(p)] for p in el))
+	end
+	return Meshes.SimpleMesh(points, connectivities)
 end
 
 function Base.convert(::Type{GeometryBasics.Mesh}, mesh::Meshes.Mesh)

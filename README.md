@@ -1,3 +1,8 @@
+[![codecov][codecov-img]][codecov-url]
+
+[codecov-img]: https://codecov.io/gh/HaoxuanGuo/MeshBridge.jl/graph/badge.svg?token=R3AOWV3FQ6
+[codecov-url]: https://codecov.io/gh/HaoxuanGuo/MeshBridge.jl
+
 # Why This Package
 
 Because there are two packages about geometry
